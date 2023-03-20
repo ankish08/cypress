@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm ci' //To install all exact version dependencies
+                bat 'npm run cy:verify' //Verify that cypress is correctly installed and is executable
+            }
+        }
+        stage('Test'){
+            steps{
+                bat 'npm test'
+            }
+        }
+    }
+}
