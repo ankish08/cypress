@@ -5,6 +5,7 @@ pipeline {
             steps {
                 bat 'npm ci' //To install all exact version dependencies
                 
+            }
         }
         stage('Test'){
             steps{
