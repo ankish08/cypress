@@ -23,7 +23,7 @@ it('Approach2 by using custom commands', ()=> {
 
 })
 
-it.only('Approach2 by using cypress iframe plugin', ()=> {
+it('Approach2 by using cypress iframe plugin', ()=> {
     cy.visit('http://the-internet.herokuapp.com/iframe')
 
    cy.frameLoaded('#mce_0_ifr') //Load the frame

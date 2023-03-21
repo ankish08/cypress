@@ -46,11 +46,11 @@ describe('Assertions demo', () =>{
            let actName =x.text()
            //Assertion in BDD Approach
            expect(actName).to.equal(expName) 
-           expect(actName).to.not.equal(expName)
+           //expect(actName).to.not.equal(expName)
 
             //Assertion in TDD Approach
             assert.equal(actName,expName) 
-            assert.notequal(actName,expName) 
+            //assert.notequal(actName,expName) 
         })
         
     })

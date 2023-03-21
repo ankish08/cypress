@@ -59,7 +59,7 @@ describe('Alerts', ()=> {
       cy.get('#result').should('have.text','You entered: welcome') 
 
     })
-    it.only('Authenticated Alert', ()=> 
+    it('Authenticated Alert', ()=> 
     {
       cy.visit('http://admin:admin@the-internet.herokuapp.com/basic_auth')
 

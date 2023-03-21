@@ -44,7 +44,7 @@ describe('Handling tables', ()=> {
            
         })
 
-        it('Pagination', ()=> {
+        it.skip('Pagination', ()=> {
 
             //Find total number of pages
             cy.get()

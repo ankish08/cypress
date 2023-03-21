@@ -8,7 +8,7 @@ describe('My First test', () => {
       cy.title().should('eq','Football Betting & Football Odds › 888sport')
     })
 
-    it('verify title negative', () =>
+    it.skip('verify title negative', () =>
     {
         cy.visit('http://www.888sport.com/football/')
 

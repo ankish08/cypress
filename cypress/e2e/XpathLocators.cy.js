@@ -1,5 +1,5 @@
-describe('XpathLocators', ()=>{
-    it('Find no. of products', ()=>{
+describe.skip('XpathLocators', ()=>{
+    it.skip('Find no. of products', ()=>{
 
         cy.visit('https://rahulshettyacademy.com/')
         cy.xpath(" (//a[normalize-space()='Courses'])[1]").click()

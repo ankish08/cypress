@@ -1,14 +1,14 @@
 
 
 describe('Dropdown Test suite', ()=> {
-    it.skip('Dropdowns with select', ()=> {
+    it('Dropdowns with select', ()=> {
 
         cy.visit('https://www.zoho.com/commerce/free-demo.html')
 
         cy.get('#zcf_address_country').select('India').should('have.value', 'India')
     })
 
-    it.skip('Dropdown without select', () => {
+    it('Dropdown without select', () => {
 
         cy.visit('http://www.dummyticket.com/dummy-ticket-for-visa-application/')
         cy.get('#select2-billing_country-container').click()
@@ -17,14 +17,14 @@ describe('Dropdown Test suite', ()=> {
 
     })
 
-    it.skip('Auto suggest Dropdown', () => {
+    it('Auto suggest Dropdown', () => {
 
         cy.visit('http://www.wikipedia.org')
         cy.get('#searchInput').type('Delhi')
         cy.get('.suggestion-title').contains('Delhi University').click()
     })
 
-    it.skip('Dynamic Dropdown', () => {
+    it('Dynamic Dropdown', () => {
 
         cy.visit('http://www.wikipedia.org')
         cy.get('#searchInput').type('Delhi')

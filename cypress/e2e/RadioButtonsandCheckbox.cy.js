@@ -26,7 +26,7 @@ it('Checking Checkboxes', ()=>
   cy.get('input.form-check-input[type="checkbox"]').last().check()
 })
 
-  it.only('Checking Checkboxes', ()=>
+  it('Checking Checkboxes', ()=>
 {
   cy.visit('http://rahulshettyacademy.com/AutomationPractice/')
   cy.get('#checkBoxOption1').check().should('be.checked').and('have.value','option1')
