@@ -46,7 +46,7 @@ describe('Alerts', ()=> {
     })
     it(' JS Prompt Alerts', ()=> 
     {
-      cy.visit('http://the-internet.herokuapp.com/javascript_alerts')
+      cy.visitss('http://the-internet.herokuapp.com/javascript_alerts')
 
       cy.window().then((win) =>{
         cy.stub(win,'prompt').returns('welcome')
