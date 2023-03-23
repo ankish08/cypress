@@ -8,11 +8,10 @@ describe('CSS Locators', ()=>{
 
         cy.visit('http://www.888sport.com')
         cy.get('a#topMenuaCloginButton').click()
+        cy.wait(2000)
         cy.get('input#rlLoginUsername').type(username)
-        cy.get('input#rlLoginPassword').type(password, {log: false})
+        cy.get('input#rlLoginPassword').type(password, {log: false}) 
         cy.get('button#rlLoginSubmit').click()
-        cy.wait(5000)
-        cy.get(".iconsCarousel__link[href='/tennis/']").click()
-        
+        cy.get('#onetrust-accept-btn-handler').click()
     })
 })
