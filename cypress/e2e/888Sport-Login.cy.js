@@ -11,7 +11,7 @@ describe('CSS Locators', ()=>{
         cy.get('input#rlLoginUsername').type(username)
         cy.get('input#rlLoginPassword').type(password, {log: false})
         cy.get('button#rlLoginSubmit').click()
-        cy.wait(3000)
+        cy.wait(5000)
         cy.get(".iconsCarousel__link[href='/tennis/']").click()
         
     })
