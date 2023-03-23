@@ -16,7 +16,7 @@ describe('Handling tables', ()=> {
 
     })
 
-        it.skip('Check No. of rows and columns', ()=> {
+        it('Check No. of rows and columns', ()=> {
 
             cy.get("table[class='table table-bordered table-hover']>tbody>tr").should('have.length', 10)
             cy.get("table[class='table table-bordered table-hover']>thead>tr>td").should('have.length', 7)
@@ -44,10 +44,17 @@ describe('Handling tables', ()=> {
            
         })
 
-        it.skip('Pagination', ()=> {
-
+        it('Pagination', ()=> {
+            
+            
             //Find total number of pages
-            cy.get()
+            let totalPages
+            cy.get(".col-sm-6.text-end").then( (e) => {
+                let text = e.text(); // Showing 1 to 10 of 5581 (559 Pages)
+                totalPages= text.substring(text.indexOf('(')+1, text.indexOf('Pages')-1 )
+                cy.log('Total number pf pages in a table=====>'+totalPages)
+
+            })
         })
 
     })
