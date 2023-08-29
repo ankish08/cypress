@@ -7,8 +7,8 @@ describe('CSS Locators', ()=>{
         const password = Cypress.env('password')
 
         cy.visit('http://www.888sport.com')
-        cy.get('a#topMenuaCloginButton').click()
-        cy.wait(2000)
+        cy.get('[data-testid="topMenuaCloginButton"]').click()
+       
         cy.get('input#rlLoginUsername').type(username)
         cy.get('input#rlLoginPassword').type(password, {log: false}) 
         cy.get('button#rlLoginSubmit').click()

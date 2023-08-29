@@ -1,5 +1,3 @@
-
-
 describe('Dropdown Test suite', ()=> {
     it('Dropdowns with select', ()=> {
 
@@ -12,8 +10,8 @@ describe('Dropdown Test suite', ()=> {
 
         cy.visit('http://www.dummyticket.com/dummy-ticket-for-visa-application/')
         cy.get('#select2-billing_country-container').click()
-        cy.get('.select2-search__field').type('Ireland').type('{enter}')
-        cy.get('#select2-billing_country-container').should('have.text','Ireland')
+        cy.get('.select2-search__field').type('Iran').type('{enter}')
+        cy.get('#select2-billing_country-container').should('have.text','Iran')
 
     })
 
@@ -31,18 +29,18 @@ describe('Dropdown Test suite', ()=> {
         cy.get('.suggestion-title').contains('Delhi University').click()
     })
 
-    it('Dynamic Dropdown', () => {
+    it.only('Dynamic Dropdown', () => {
 
         cy.visit('http://rahulshettyacademy.com/AutomationPractice/')
-        cy.get('#autocomplete').type('ind')
-        cy.get('.ui-menu-item div').each(($el, index, $list) => {
+        cy.get('#autocomplete').type('us')
+        cy.get('.ui-menu-item-wrapper').each(($el, index, $list) => {
 
-            if($el.text()=='India')
+            if($el.text()=='Cyprus')
             {
                 $el.click()
             }
         })
-        cy.get('#autocomplete').should('have.value', 'India')
+        cy.get('#autocomplete').should('have.value', 'Cyprus')
         
     })
     

@@ -1,5 +1,3 @@
-
-
 describe('888 Test suite', ()=> {
 
     it('888 Test case', ()=> {
@@ -7,7 +5,7 @@ describe('888 Test suite', ()=> {
         cy.visit('http://www.888sport.com') // Open the 888sport.com
         cy.wait(5000)
         cy.xpath("(//div[@id='search'])[1]").click() // Click on Search
-        cy.wait(5000)
+        cy.wait(4000)
         cy.get('[data-testid="search-widget__input"]').type('football') // Search for Football
         cy.get("div[data-testid='sport-suggestion']").should('have.length',3) // Verifying there are 3 sports which have football name in it i.e Football, American Football, GAA Football
         cy.get("div[data-testid='sport-suggestion']").each(($el, index, $list) =>{
@@ -24,8 +22,15 @@ describe('888 Test suite', ()=> {
        cy.xpath("//span[@id='319670']").should('contain','England Premier League').click() //Clicking on the England Premier League Competition
        cy.get("button[data-item-slug='matches']").should('be.visible')
 
-        
-
-
     })
+
+    it.skip('888 Test case', ()=> {
+
+        cy.visit('http://www.livescore.com') // Open the 888sport.com
+        cy.wait(5000)
+
+        cy.get('[src="/ls-web-assets/svgs/common/search-1e1f1087166a2eae49a82dd529b7aafd.svg"]').click() // Click on Search
+        cy.wait(4000)
+})
+
 })
