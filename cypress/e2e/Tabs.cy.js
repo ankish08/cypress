@@ -1,11 +1,11 @@
 describe('Handle tabs', ()=> {
-    it.only('Approach1', ()=> {
+    it('Approach1', ()=> {
 
-        cy.visit('http://the-internet.herokuapp.com/windows') //parent tab
+        cy.visit('https://the-internet.herokuapp.com/windows') //parent tab
 
         cy.get('.example>a').invoke('removeAttr', 'target').click() //clicking on the link
 
-        cy.url().should('include', 'http://the-internet.herokuapp.com/windows/new') // child tab
+        cy.url().should('include', 'https://the-internet.herokuapp.com/windows/new') // child tab
 
         //operations
 
@@ -14,7 +14,7 @@ describe('Handle tabs', ()=> {
 
     it.skip('Approach2', ()=> {
 
-        cy.visit('http://the-internet.herokuapp.com/windows') //parent tab
+        cy.visit('https://the-internet.herokuapp.com/windows') //parent tab
 
         cy.get('.example > a').then((e) => {
                 let url = e.prop('href')
@@ -23,7 +23,7 @@ describe('Handle tabs', ()=> {
         })//clicking on the link
          
   
-        cy.url().should('include', 'http://the-internet.herokuapp.com/windows/new') // child tab
+        cy.url().should('include', 'https://the-internet.herokuapp.com/windows/new') // child tab
 
         cy.wait(5000)
 

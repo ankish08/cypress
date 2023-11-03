@@ -1,6 +1,5 @@
 import Login from  "../PageObjects/LoginPage.js";
 describe('POM', () =>{
-
     // General Approach
     it('LoginTest', ()=> {
 
@@ -10,7 +9,6 @@ describe('POM', () =>{
         cy.get("button[type='submit']").click();
         cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').should('have.text', 'Dashboard')
     })
-
     //using POM approach
     it.only('LoginTest', ()=> {
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -20,7 +18,6 @@ describe('POM', () =>{
          ln.setPassword('admin123')
          ln.clickSubmit();
          ln.verifyLogin();
-
     })
 
     //using POM with Fixture approach
@@ -34,7 +31,6 @@ describe('POM', () =>{
          ln.setPassword(data.password)
          ln.clickSubmit();
          ln.verifyLogin();
-
         })
     })
 })

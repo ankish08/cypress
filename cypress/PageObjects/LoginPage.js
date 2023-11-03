@@ -8,19 +8,15 @@ class Login
      setUserName(username)
      {
         cy.get(this.txtUsername).type(username)
-
      }
      setPassword(password)
      {
-        cy.get(this.txtPassword).type(password)
-    
+        cy.get(this.txtPassword).type(password)   
      }
-
      clickSubmit()
      {
         cy.get(this.btnSubmit).click();
      }
-
      verifyLogin()
      {
         cy.get(this.lblmsg).should('have.text','Dashboard')
@@ -29,6 +25,5 @@ class Login
      {
         cy.get('.orangehrm-login-forgot > .oxd-text').click()
      }
-
 }
 export default Login;

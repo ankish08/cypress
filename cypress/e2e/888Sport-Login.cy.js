@@ -1,17 +1,16 @@
 
 describe('CSS Locators', ()=>{
 
-    it('Login to 888', ()=>{
+    it('Login to OrangeHRM', ()=>{
 
         const username = Cypress.env('username')
         const password = Cypress.env('password')
 
-        cy.visit('http://www.888sport.com')
-        cy.get('[data-testid="topMenuaCloginButton"]').click()
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
        
-        cy.get('input#rlLoginUsername').type(username)
-        cy.get('input#rlLoginPassword').type(password, {log: false}) 
-        cy.get('button#rlLoginSubmit').click()
-        cy.get('#onetrust-accept-btn-handler').click()
+        cy.get("input[placeholder='Username']").type(username)
+        cy.get("input[placeholder='Password']").type(password, {log: false}) 
+        cy.get("button[type='submit']").click()
+
     })
 })

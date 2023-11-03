@@ -10,12 +10,11 @@ describe('Dropdown Test suite', ()=> {
 
         cy.visit('http://www.dummyticket.com/dummy-ticket-for-visa-application/')
         cy.get('#select2-billing_country-container').click()
-        cy.get('.select2-search__field').type('Iran').type('{enter}')
-        cy.get('#select2-billing_country-container').should('have.text','Iran')
-
+        cy.get('.select2-search__field').type('Ireland').type('{enter}')
+        cy.get('#select2-billing_country-container').should('have.text','Ireland')
     })
 
-    it('Auto suggest Dropdown', () => {
+    it.skip('Auto suggest Dropdown', () => {
 
         cy.visit('http://www.wikipedia.org')
         cy.get('#searchInput').type('Delhi')
@@ -29,7 +28,7 @@ describe('Dropdown Test suite', ()=> {
         cy.get('.suggestion-title').contains('Delhi University').click()
     })
 
-    it.only('Dynamic Dropdown', () => {
+    it('Dynamic Dropdown', () => {
 
         cy.visit('http://rahulshettyacademy.com/AutomationPractice/')
         cy.get('#autocomplete').type('us')
@@ -40,8 +39,6 @@ describe('Dropdown Test suite', ()=> {
                 $el.click()
             }
         })
-        cy.get('#autocomplete').should('have.value', 'Cyprus')
-        
-    })
-    
+        cy.get('#autocomplete').should('have.value', 'Cyprus')       
+    })    
 })

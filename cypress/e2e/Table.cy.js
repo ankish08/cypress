@@ -22,7 +22,7 @@ describe('Handling tables', ()=> {
             cy.get("table[class='table table-bordered table-hover']>thead>tr>td").should('have.length', 7)
         })
 
-        it.skip('Check cell data from specific row and column', ()=> {
+        it('Check cell data from specific row and column', ()=> {
 
             cy.get("table[class='table table-bordered table-hover']>tbody>tr:nth-child(5)>td:nth-child(3)").contains('princytrainings4@gmail.com')
            

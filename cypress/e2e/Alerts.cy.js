@@ -2,7 +2,7 @@
 describe('Alerts', ()=> {
     it(' JS Alerts', ()=> 
     {
-      cy.visit('http://the-internet.herokuapp.com/javascript_alerts')
+      cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
       cy.get("button[onclick='jsAlert()']").click()
 
       cy.on('window:alert',(t)=>{
@@ -16,7 +16,7 @@ describe('Alerts', ()=> {
     })
     it(' JS Confirm Alerts - OK', ()=> 
     {
-      cy.visit('http://the-internet.herokuapp.com/javascript_alerts')
+      cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
       cy.get("button[onclick='jsConfirm()']").click()
 
       cy.on('window:confirm',(t)=>{
@@ -30,7 +30,7 @@ describe('Alerts', ()=> {
     })
     it(' JS Confirm Alerts - Cancel', ()=> 
     {
-      cy.visit('http://the-internet.herokuapp.com/javascript_alerts')
+      cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
       cy.get("button[onclick='jsConfirm()']").click()
 
       cy.on('window:confirm',(t)=>{
@@ -46,7 +46,7 @@ describe('Alerts', ()=> {
     })
     it(' JS Prompt Alerts', ()=> 
     {
-      cy.visit('http://the-internet.herokuapp.com/javascript_alerts')
+      cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
 
       cy.window().then((win) =>{
         cy.stub(win,'prompt').returns('welcome')
@@ -61,7 +61,7 @@ describe('Alerts', ()=> {
     })
     it('Authenticated Alert', ()=> 
     {
-      cy.visit('http://admin:admin@the-internet.herokuapp.com/basic_auth')
+      cy.visit('https://admin:admin@the-internet.herokuapp.com/basic_auth')
 
       cy.get("div[class='example'] p").should('have.contain', "Congratulations")
 
