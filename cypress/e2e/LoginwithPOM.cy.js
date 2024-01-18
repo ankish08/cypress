@@ -16,7 +16,8 @@ describe('POM', () =>{
          const ln = new Login()
          ln.setUserName('Admin')
          ln.setPassword('admin123')
-         ln.clickSubmit();
+         ln.forgotpassword()
+         //ln.clickSubmit();
          ln.verifyLogin();
     })
 
