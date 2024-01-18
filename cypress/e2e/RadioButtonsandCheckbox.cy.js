@@ -1,5 +1,5 @@
 describe('UI Elements', ()=>{
-    it.skip('Checking Radio Buttons', ()=>
+    it('Checking Radio Buttons', ()=>
     {
       cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
       cy.get('input[value="radio1"]').should('be.visible')
@@ -15,19 +15,19 @@ describe('UI Elements', ()=>{
 it('Checking Checkboxes', ()=>
 {
   cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
-  //cy.get('#checkBoxOption1').should('be.visible')
-  //cy.get('#checkBoxOption2').should('be.visible')
-  //cy.get('#checkBoxOption3').should('be.visible')
+  cy.get('#checkBoxOption1').should('be.visible')
+  cy.get('#checkBoxOption2').should('be.visible')
+  cy.get('#checkBoxOption3').should('be.visible')
 
-  //cy.get('#checkBoxOption3').check().should('be.checked')
- // cy.get('#checkBoxOption2').check().should('be.checked')
- // cy.get('#checkBoxOption3').uncheck().should('not.be.checked')
+  cy.get('#checkBoxOption3').check().should('be.checked')
+  cy.get('#checkBoxOption2').check().should('be.checked')
+  cy.get('#checkBoxOption3').uncheck().should('not.be.checked')
 
   cy.get('input[type="checkbox"]').first().check()
   cy.get('input[type="checkbox"]').last().check()
 })
 
-  it.skip('Checking Checkboxes', ()=>
+  it('Checking Checkboxes', ()=>
 {
   cy.visit('http://rahulshettyacademy.com/AutomationPractice/')
   cy.get('#checkBoxOption1').check().should('be.checked').and('have.value','option1')

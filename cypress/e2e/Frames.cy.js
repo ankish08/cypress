@@ -10,10 +10,10 @@ it('Approach1', ()=> {
     cy.get("[aria-label='Bold']").click()
 })
 
-it('Approach2 by using custom commands', ()=> {
+it.only('Approach2 by using custom commands', ()=> {
     cy.visit('https://the-internet.herokuapp.com/iframe')
 
-    cy.iframe('#mce_0_ifr').clear().type('Welcome {ctrl+a}')
+    cy.getIframe('#mce_0_ifr').clear().type('Welcome {ctrl+a}')
     cy.get("[aria-label='Bold']").click()
 })
 

@@ -14,7 +14,7 @@ describe('Dropdown Test suite', ()=> {
         cy.get('#select2-billing_country-container').should('have.text','Ireland')
     })
 
-    it.skip('Auto suggest Dropdown', () => {
+    it('Auto suggest Dropdown', () => {
 
         cy.visit('http://www.wikipedia.org')
         cy.get('#searchInput').type('Delhi')
@@ -28,7 +28,7 @@ describe('Dropdown Test suite', ()=> {
         cy.get('.suggestion-title').contains('Delhi University').click()
     })
 
-    it('Dynamic Dropdown', () => {
+    it.only('Dynamic Dropdown', () => {
 
         cy.visit('http://rahulshettyacademy.com/AutomationPractice/')
         cy.get('#autocomplete').type('us')

@@ -10,6 +10,7 @@ describe('CSS Locators', ()=>{
        
         cy.get("input[placeholder='Username']").type(username)
         cy.get("input[placeholder='Password']").type(password, {log: false}) 
+        //cy.wait(1000)
         cy.get("button[type='submit']").click()
 
     })

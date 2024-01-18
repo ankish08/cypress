@@ -12,8 +12,8 @@ describe('Alerts', ()=> {
       //alert window automatically closed by cypress
 
       cy.get('#result').should('have.text','You successfully clicked an alert')
-
     })
+    
     it(' JS Confirm Alerts - OK', ()=> 
     {
       cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
@@ -44,6 +44,7 @@ describe('Alerts', ()=> {
       cy.get('#result').should('have.text','You clicked: Cancel') 
 
     })
+    
     it(' JS Prompt Alerts', ()=> 
     {
       cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
@@ -64,7 +65,6 @@ describe('Alerts', ()=> {
       cy.visit('https://admin:admin@the-internet.herokuapp.com/basic_auth')
 
       cy.get("div[class='example'] p").should('have.contain', "Congratulations")
-
 
     })
 

@@ -12,7 +12,7 @@ describe('Handle tabs', ()=> {
         cy.go('back') // Back to Parent tab
     })
 
-    it.skip('Approach2', ()=> {
+    it('Approach2', ()=> {
 
         cy.visit('https://the-internet.herokuapp.com/windows') //parent tab
 
@@ -21,8 +21,6 @@ describe('Handle tabs', ()=> {
                 cy.visit(url)
 
         })//clicking on the link
-         
-  
         cy.url().should('include', 'https://the-internet.herokuapp.com/windows/new') // child tab
 
         cy.wait(5000)
